@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dddddddddddd
+  mvc:
+    static-path-pattern: /**
+  datasource:
+    url: jdbc:mysql://127.0.0.1:13306/test?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #    password: 3Dcat.com@456
+    database: 0
+    lettuce:
+      pool:
+        maxActive: 20
+        maxIdle: 10
+        maxWait: -1
+        minIdle: 5
+  web:
+    resources:
+      static-locations: classpath:/static/,file:data/
+
+server:
+  port: 18180
